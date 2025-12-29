@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: 246 246 249;
+  --foreground: 15 23 42;
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-border: rgb(226 232 240);
+  --color-muted: rgb(226 232 240);
+  --color-muted-foreground: rgb(100 116 139);
+  --color-primary: rgb(59 130 246);
+  --color-primary-foreground: rgb(238 242 255);
+  --color-destructive: rgb(248 113 113);
+  --color-destructive-foreground: rgb(255 241 242);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-card: 0 12px 32px -12px rgba(30, 64, 175, 0.22);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+}
